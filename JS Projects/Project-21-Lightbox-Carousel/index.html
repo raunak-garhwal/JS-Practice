@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>lightbox image</title>
+  </head>
+  <body>
+    <header>
+      <h1>Image Lightbox</h1>
+    </header>
+
+    <div class="images-container">
+      <img
+        src="assets/img1.jpeg"
+        data-id="1"
+        alt="image item"
+        class="img-item"
+        title="Image 1"
+      />
+
+      <img
+        src="assets/img2.jpeg"
+        data-id="2"
+        alt="image item"
+        class="img-item"
+        title="Image 2"
+      />
+
+      <img
+        src="assets/img3.jpeg"
+        data-id="3"
+        alt="image item"
+        class="img-item"
+        title="Image 3"
+      />
+
+      <img
+        src="assets/img4.jpeg"
+        data-id="4"
+        alt="image item"
+        class="img-item"
+        title="Image 4"
+      />
+
+      <img
+        src="assets/img5.jpeg"
+        data-id="5"
+        alt="image item"
+        class="img-item"
+        title="Image 5"
+      />
+    </div>
+
+    <div class="lightbox" id="lightbox">
+      <button class="close-btn">&times;</button>
+      <div class="lightbox-content">
+        <div class="lightbox-img">
+          <img src="assets/img1.jpeg" alt="lightbox image" />
+          <h2>Image caption</h2>
+        </div>
+
+        <button type="button" class="prev-btn">❮</button>
+        <button type="button" class="next-btn">❯</button>
+
+        <div class="thumbnail-images">
+          <img src="assets/img1.jpeg" class="img-thumbnail" alt="" id="1" />
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 4rem 0 0 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.tabs-container {
+  border: 1px solid #e1e1e1;
+  width: calc(100% - 20vw);
+}
+
+.nav-tabs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 768px) {
+  .nav-tabs {
+    flex-wrap: nowrap;
+  }
+}
+
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.active {
+  display: block;
+}
+
+button {
+  padding: 1rem 1.5rem;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  border: 1px solid #dfdfdf;
+  background-color: #dfdfdf;
+  width: 100%;
+  cursor: pointer;
+}
+
+button.active {
+  background-color: black;
+  border-color: black;
+  color: #fff;
+}
+
+.tab-content {
+  padding: 1.5rem 2rem;
+}
+
+.tab-content p {
+  line-height: 1.75em;
+  font-size: 1.125em;
+}
+
+img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.tab-content-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .tab-content-inner {
+    flex-direction: row;
+  }
+
+  img {
+    width: 250px;
+  }
+}

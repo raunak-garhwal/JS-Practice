@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="1">
+    <title>Rainbow Boxes</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            width:  50px;
+            padding: 10px;
+            margin: 5px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+        <div class="box">Box 4</div>
+        <div class="box">Box 5</div>
+    </div>
+    <script>
+        let boxes = document.querySelectorAll(".box")
+        boxes.forEach(e=>{
+            let rc1 = Math.floor(Math.random()*255)+1;
+            let rc2 = Math.floor(Math.random()*255)+1;
+            let rc3 = Math.floor(Math.random()*255)+1;
+            boxes[0].style.backgroundColor=`rgb(${rc1},${rc2},${rc3})`;
+            rc1 = Math.floor(Math.random()*255)+1;
+            rc2 = Math.floor(Math.random()*255)+1;
+            rc3 = Math.floor(Math.random()*255)+1;
+            boxes[1].style.backgroundColor=`rgb(${rc1},${rc2},${rc3})`;
+            rc1 = Math.floor(Math.random()*255)+1;
+            rc2 = Math.floor(Math.random()*255)+1;
+            rc3 = Math.floor(Math.random()*255)+1;
+            boxes[2].style.backgroundColor=`rgb(${rc1},${rc2},${rc3})`;
+            rc1 = Math.floor(Math.random()*255)+1;
+            rc2 = Math.floor(Math.random()*255)+1;
+            rc3 = Math.floor(Math.random()*255)+1;
+            boxes[3].style.backgroundColor=`rgb(${rc1},${rc2},${rc3})`;
+            rc1 = Math.floor(Math.random()*255)+1;
+            rc2 = Math.floor(Math.random()*255)+1;
+            rc3 = Math.floor(Math.random()*255)+1;
+            boxes[4].style.backgroundColor=`rgb(${rc1},${rc2},${rc3})`;
+        })
+
+        // CODE WITH HARRY CODE
+        // let boxes = document.querySelector(".container").children
+
+        // function getRandomColor(){
+        // let val1 = Math.ceil(0 + Math.random()*255);
+        // let val2 = Math.ceil(0 + Math.random()*255);
+        // let val3 = Math.ceil(0 + Math.random()* 255);
+        // return rgb(`${val1}, ${val2}, ${val3}`)
+        // }
+
+        // Array.from(boxes).forEach(e=>{
+        // e.style. backgroundColor = getRandomColor()
+        // e.style. color = getRandomColor()
+        // })
+
+
+        // ALTERNATE SOLUTION
+        // let boxes = document.getElementsByClassName('box');
+
+        // for (let box of boxes){
+        // // Generating Random Color
+        // const randomColor = Math.floor(Math.random()*16777215).toString(16);
+        // // Generating Random Background Color
+        // const randomBgColor = Math.floor(Math.random()*16777215).toString(16);
+
+        // box.style.color = "#" + randomColor;
+        // box.style. backgroundColor = "#" + randomBgColor;
+        // }
+
+    </script>
+</body>
+</html>

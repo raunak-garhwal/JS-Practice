@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --grey-color1: hsl(209, 61%, 16%);
+  --grey-color2: hsl(210, 36%, 96%);
+  --white-color: #ffffff;
+  --blue-color: #06c4ff;
+  --black-color: #222;
+  --font-family: "Montserrat", sans-serif;
+  --letter-spacing: 0.05rem;
+  --para-font-size: 1.35em;
+  --border-radius: 0.25rem;
+  --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --md-width: 60vw;
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--font-family);
+  background: var(--black-color);
+  color: var(--white-color);
+  line-height: 1.5em;
+  font-size: 0.875rem;
+}
+
+section {
+  padding: 5rem 0;
+}
+
+.faqs-wrapper {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+@media screen and (min-width: 992px) {
+  .faqs-wrapper {
+    width: 95vw;
+  }
+}
+
+.title {
+  margin-bottom: 5rem;
+}
+.title h2 {
+  color: var(--blue-color);
+  text-align: center;
+  font-size: 4rem;
+}
+.faqs-wrapper {
+  max-width: var(--md-width);
+}
+.faqs-inner {
+  background: var(--white-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 1.5rem 1.5rem 0 1.5rem;
+  margin-bottom: 2rem;
+}
+.faqs-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: capitalize;
+  padding-bottom: 1.75rem;
+}
+
+.faqs-question p {
+  margin-bottom: 0;
+  letter-spacing: var(--letter-spacing);
+  color: var(--grey-color1);
+  font-size: var(--para-font-size);
+}
+.faqs-btn {
+  font-size: 1.75rem;
+  background: transparent;
+  border: 2px solid var(--black-color);
+  cursor: pointer;
+  color: var(--black-color);
+  width: 40px;
+  border-radius: 50%;
+  line-height: 1.25em;
+}
+
+.faqs-answer {
+  padding: 1.5rem 0 2rem 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+.faqs-answer p {
+  line-height: 1.75em;
+  margin-bottom: 0;
+  font-size: 1.25em;
+  color: #868686;
+}
+/* hide text */
+.faqs-answer {
+  display: none;
+}
+.show-text .faqs-answer {
+  display: block;
+}
+.close-icon {
+  display: none;
+}
+.show-text .close-icon {
+  display: inline;
+}
+.show-text .open-icon {
+  display: none;
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Website</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        background-color: black;
+        color: white;
+        box-sizing: border-box;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        padding-top: 6px;
+        height: 100px;
+        position: relative;
+      }
+      .card {
+        display: flex;
+        margin: 2px;
+        position: relative;
+        /* z-index: 6; */
+      }
+      #duration {
+        position: absolute;
+        bottom: 6px;
+        left: 143px;
+        z-index: 10;
+        color: white;
+        font-size: 11px;
+        background-color: black;
+        border-radius: 6px;
+        padding: 2.5px;
+      }
+      .img > img {
+        border-radius: 10px;
+        height: 100px;
+        margin: 0px 5px;
+        position: relative;
+        /* z-index: 4; */
+      }
+      .details {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .intro p {
+        padding-left: 10px;
+        font-size: 20px;
+      }
+      .other-info {
+        display: flex;
+        padding-left: 10px;
+        gap: 6px;
+      }
+      .other-info p {
+        font-size: 15px;
+        color: rgb(174, 171, 171);
+      }
+      #centerdot {
+        font-size: 30px;
+        position: relative;
+        top: -13px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="img">
+          <span id="duration">31:22</span>
+          <img src="assets/image.png" alt="Thumbnail" />
+        </div>
+        <div class="details">
+          <div class="intro">
+            <p>
+              Introduction to Sigma Web Dev Course | The Best Web Dev Course
+            </p>
+          </div>
+          <div class="other-info">
+            <p>CodeWithHarry</p>
+            <p id="centerdot">&centerdot;</p>
+            <p>560k views</p>
+            <p id="centerdot">&centerdot;</p>
+            <p>2 months ago</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function convertViews(v) {
+        if (v > 999999999) {
+          (v /= 1000000000).tostring;
+          v += "B";
+        } else if (v > 999999) {
+          (v /= 1000000).tostring;
+          v += "M";
+        } else if (v > 999) {
+          (v /= 1000).tostring;
+          v += "k";
+        }
+        return v;
+      }
+      function createCard(title, cName, views, monthsOld, duration, thumbnail) {
+        let cont = document.querySelector(".container");
+        cont.insertAdjacentHTML(
+          "beforeend",
+          `<div class="card">
+        <div class="img">
+        <span id="duration">${duration}</span>
+        <img src="${thumbnail}" alt="Thumbnail" />
+        </div>
+        <div class="details">
+        <div class="intro">
+            <p>
+            ${title}
+            </p>
+        </div>
+        <div class="other-info">
+            <p>${cName}</p>
+            <p id="centerdot">&centerdot;</p>
+            <p>${convertViews(views)} views</p>
+            <p id="centerdot">&centerdot;</p>
+            <p>${monthsOld} months ago</p>
+        </div>
+        </div>
+    </div>`
+        );
+      }
+      
+      createCard("Introduction to Web Dev Course | The Best Course #1", "CodeWithHarry", 5000, 7, "31:22", "assets/image.png")
+      // createCard("Introduction to Web Dev Course | The Best Course #1", "CodeWithHarry", 50, 7, "31:22", "assets/image.png")
+      // createCard("Introduction to Web Dev Course | The Best Course #1", "CodeWithHarry", 560000, 7, "31:22", "assets/image.png")
+      // createCard("Introduction to Web Dev Course | The Best Course #1", "CodeWithHarry", 560, 7, "31:22", "assets/image.png")
+      // createCard("Introduction to Web Dev Course | The Best Course #1", "CodeWithHarry", 560000, 7, "31:22", "assets/image.png")
+      // createCard("Introduction to Web Dev Course | The Best Course #1", "CodeWithHarry", 5600, 7, "31:22", "assets/image.png")
+      // createCard("Introduction to Web Dev Course | The Best Course #1", "CodeWithHarry", 560000, 7, "31:22", "assets/image.png")
+      // createCard("Introduction to Web Dev Course | The Best Course #1", "CodeWithHarry", 560000000, 7, "31:22", "assets/image.png")
+      // createCard("Introduction to Web Dev Course | The Best Course #1", "CodeWithHarry", 5600000000, 7, "31:22", "assets/image.png")
+    </script>
+  </body>
+</html>

@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #fde3e3;
+}
+
+.container {
+  position: relative;
+  max-width: 640px;
+  width: 100%;
+  margin: 4rem auto 3rem;
+}
+
+.select-btn {
+  display: flex;
+  height: 4rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.select-btn .btn-text {
+  font-size: 1.1em;
+  font-weight: 400;
+  color: #333;
+}
+
+.select-btn .arrow-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2rem;
+  width: 2rem;
+  color: #fff;
+  font-size: 1em;
+  border-radius: 50%;
+  background-color: #d26ef7;
+  transition: all 0.5s ease-in;
+}
+
+.select-btn.open .arrow-btn {
+  transform: rotate(-180deg);
+}
+
+.list-items {
+  position: relative;
+  margin-top: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+.select-btn.open ~ .list-items {
+  display: block;
+}
+
+.list-items .item {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  height: 4rem;
+  cursor: pointer;
+  transition: 0.3s;
+  gap: 1rem;
+  padding: 1.25rem;
+}
+
+.list-items .item:hover {
+  background-color: #e7edfe;
+}
+
+.item .item-text {
+  font-size: 1.1em;
+  font-weight: 400;
+  color: #333;
+}
+
+.checkbox {
+  transform: scale(1);
+  transition: all 0.2s ease-in-out;
+}
+
+.item.checked .checkbox {
+  transform: scale(1.25);
+}
+
+#selected-options {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+#selected-options .options-list {
+  display: flex;
+  justify-content: space-between;
+  max-width: 8rem;
+  width: 100%;
+  padding: 0.5rem 0.5rem;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.close {
+  cursor: pointer;
+}

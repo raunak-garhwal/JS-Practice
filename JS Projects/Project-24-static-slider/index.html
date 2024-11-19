@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Slider</title>
+  </head>
+  <body>
+    <header>
+      <h1>Slider</h1>
+    </header>
+
+    <div class="slider-container">
+      <div class="slide active">
+        <div class="numberText">1 / 4</div>
+        <img src="assets/img1.jpeg" alt="slider image" />
+        <div class="caption">City 1</div>
+      </div>
+
+      <div class="slide">
+        <div class="numberText">2 / 4</div>
+        <img src="assets/img2.jpeg" alt="slider image" />
+        <div class="caption">City 2</div>
+      </div>
+
+      <div class="slide">
+        <div class="numberText">3 / 4</div>
+        <img src="assets/img3.jpeg" alt="slider image" />
+        <div class="caption">City 3</div>
+      </div>
+
+      <div class="slide">
+        <div class="numberText">4 / 4</div>
+        <img src="assets/img4.jpg" alt="slider image" />
+        <div class="caption">City 4</div>
+      </div>
+
+      <button type="button" class="prev-btn" onClick="prevSlide()">❮</button>
+      <button type="button" class="next-btn" onClick="nextSlide()">❯</button>
+    </div>
+
+    <div class="dot-navigation">
+      <span class="dot active" onClick="changeSlide(0)"></span>
+      <span class="dot" onClick="changeSlide(1)"></span>
+      <span class="dot" onClick="changeSlide(2)"></span>
+      <span class="dot" onClick="changeSlide(3)"></span>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
