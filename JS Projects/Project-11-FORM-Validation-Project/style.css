@@ -24,7 +24,6 @@ body{
     border-bottom: 1px solid #f0f0f0;
     background-color: #f7f7f7;
     padding: 20px 40px;
-
 }
 
 .header h1{
@@ -103,4 +102,3 @@ form{
 .form button:hover{
     background-color: #84bcc7;
 }
-

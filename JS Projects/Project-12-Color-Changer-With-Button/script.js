@@ -9,3 +9,19 @@ buttons.forEach(function(button){
         }
     });
 });
+
+
+
+// Alternate Solution using Closers (Optimized Way)
+
+// function clickHandler(color){
+//     return function(){
+//         document.body.style.backgroundColor = `${color}`
+//     }
+// }
+
+// document.getElementById('grey').onclick = clickHandler("grey")
+// document.getElementById('white').onclick = clickHandler("white")
+// document.getElementById('blue').onclick = clickHandler("blue")
+// document.getElementById('yellow').onclick = clickHandler("yellow")
+

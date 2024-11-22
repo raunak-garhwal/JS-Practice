@@ -1,9 +1,7 @@
-
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-
 }
 
 body{
@@ -14,12 +12,11 @@ body{
     min-width: 100vw;
     text-align: center;
     font-family: monospace;
-    background: linear-gradient(to right,#7ed56f,#28b485);
+    background: linear-gradient(to right,#7ed56f,#23ad7f);
     color: #fff;
 }
 
 .container{
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,7 +24,6 @@ body{
     background: rgba(0, 0, 0, 0.6);
     border-radius: 10px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-
 }
 
 h1{
@@ -37,6 +33,7 @@ h1{
 
 .time{
     font-size: 3rem;
+    font-weight: bold;
     background: rgba(0, 0, 0, 0.6);   
     padding: 0.5rem 1rem;
     border-radius: 50px;
@@ -49,10 +46,7 @@ h1{
     gap: 1rem;
 }
 
-button.start,
-button.stop,
-button.reset{
-
+button.start, button.stop, button.reset{
     border: none;
     outline: none;
     padding: 1rem 2rem;
@@ -62,15 +56,6 @@ button.reset{
     color: #fff;
     transition: background 0.3s, transform 0.2s;
     width: 150px;
-}
-
-@keyframes bounce {
-    0%,100%{
-        transform: translateY(0);
-    }
-    50%{    
-        transform: translateY(-10px);
-    }
 }
 
 button.start{
@@ -85,6 +70,15 @@ button.reset{
     background-color: #ff9a8b;
 }
 
-.start:hover{
+@keyframes bounce {
+    0%,100%{
+        transform: translateY(0);
+    }
+    50%{    
+        transform: translateY(-10px);
+    }
+}
+
+.start:hover, .stop:hover, .reset:hover{
     animation: bounce 0.5s;
 }

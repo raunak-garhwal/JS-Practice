@@ -1,12 +1,7 @@
 
-
 let date = new Date();
-
 let dayNumber = date.getDay();
-
-let theDayIs;
-
-let quote;
+let theDayIs,quote;
 
 switch(dayNumber){
 
@@ -29,8 +24,7 @@ switch(dayNumber){
         theDayIs = "Wednesday";
         quote = "Wednesday is a Third day of Work";
         break;
-            
-            
+                        
     case 4:
         theDayIs = "Thursday";
         quote = "Thursday is a Meeting day of Work";
@@ -47,9 +41,8 @@ switch(dayNumber){
         break;
 }
 
+let spanOfWeekday = document.getElementById("weekday");
+let spanOfQuote = document.getElementById("quote");
 
-    let spanOfWeekday = document.getElementById("weekday");
-    spanOfWeekday.innerHTML =  `${theDayIs}`;
-
-    let spanOfQuote = document.getElementById("quote");
-    spanOfQuote.innerHTML = `${quote}`;
+spanOfWeekday.innerHTML =  `${theDayIs}`;
+spanOfQuote.innerHTML = `${quote}`;

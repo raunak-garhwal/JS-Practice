@@ -10,7 +10,6 @@ form.addEventListener("submit",function(e){
 });
 
 function checkInputs(){
-
     const usernameValue = username.value.trim();
     const emailValue = email.value.trim();
     const passwordValue = password.value.trim();
@@ -22,8 +21,8 @@ function checkInputs(){
         setSuccessFor(username);
     }
 
-    if(emailValue ===""){
-        setErrorFor(email,"Email Cannot be Empty")
+    if(emailValue === ""){
+        setErrorFor(email,"Email cannot be empty")
     }else if (!isEmail(emailValue)){
         setErrorFor(email,"Enter a Valid Email")
     }else{
@@ -43,8 +42,6 @@ function checkInputs(){
     }else{
         setSuccessFor(passwordCheck);
     }
-
-
 }
 
 function setErrorFor(input,message){
@@ -61,5 +58,4 @@ function setSuccessFor(input){
 
 function isEmail(email){
     return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
-
 }

@@ -1,23 +1,15 @@
 function showMessageContent(message){
-
     const messageContent = document.querySelector(".message-content");
     messageContent.textContent = `"${message}" - Your Message is Delivered`;
-
 }
 
-
 function showInvalidMessage(){
-
     const invalidMessage = document.querySelector(".invalid-message");
     invalidMessage.style.display = "block";
-    setTimeout(()=>{
-        invalidMessage.style.display = "none";
-    },2000);
-
+    setTimeout(() => invalidMessage.style.display = "none",2000);
 }
 
 function onSubmitForm(e){
-
     e.preventDefault();
 
     const messageInput = document.querySelector(".message");
@@ -29,7 +21,6 @@ function onSubmitForm(e){
         showMessageContent(message);
         messageInput.value = "";
     }
-
 }
 
 (function (){

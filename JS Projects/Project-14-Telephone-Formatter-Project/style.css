@@ -13,7 +13,7 @@ body{
     align-items: center;
     min-height: 100vh;
     flex-direction: column;
-    background: linear-gradient(to bottom, #3494e6,#ec6ead);
+    background: linear-gradient(to bottom right, #3494e6,#d46da1);
 }
 
 .container{
