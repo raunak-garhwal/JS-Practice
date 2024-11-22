@@ -10,7 +10,6 @@ form.addEventListener("submit",function(e){
     let kgTOpound;
 
     if((isNaN(input.value)) || input.value <= 0){
-
         convertedWeight.classList.add("error");
         convertedWeight.innerHTML = "<p>Please enter a valid number!</p>"
 
@@ -22,18 +21,15 @@ form.addEventListener("submit",function(e){
         input.value = "";
 
     }else{
-
         kgTOpound = Number(input.value) * 2.20462;  // equal to  1 KG
         convertedWeight.classList.add("successful");
         convertedWeight.innerHTML = `${kgTOpound.toFixed(3)}`;
-
 
         setTimeout(()=>{
             convertedWeight.innerHTML = "";
             convertedWeight.classList.remove("successful");  
             input.value = "";
         },10000);
-
     }
-
+    
 });

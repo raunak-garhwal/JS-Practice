@@ -23,9 +23,9 @@ body{
 }
 
 .container{
-   border-radius: 20px;
-   background:linear-gradient(to right, #1d2b64,#61045f);
-   box-shadow: 10px 10px 10px rgba(246, 178, 172, 0.2), -10px -10px 30px rgba(255, 107, 107, 0.8);     
+    border-radius: 20px;
+    background:linear-gradient(to right, #1d2b64,#61045f);
+    box-shadow: 10px 10px 10px rgba(246, 178, 172, 0.2), -10px -10px 30px rgba(255, 107, 107, 0.8);     
     padding: 3rem;
 }
 
@@ -42,7 +42,6 @@ h1{
 }
 
 .css-controller{
-
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -54,13 +53,12 @@ label{
     font-size: 1rem;
     color: #f6f6f6;
     margin-top: 0.5rem;
-
 }
 
 img{
-    width: var(--width);
     height: 80%;
     margin-top: 1rem;
+    width: var(--width);
     padding: var(--padding);
     filter: blur(var(--blur));
     background-color: var(--base);

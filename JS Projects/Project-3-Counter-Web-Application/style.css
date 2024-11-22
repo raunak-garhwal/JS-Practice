@@ -13,7 +13,6 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
 }
 
 .card{
@@ -54,6 +53,7 @@ body{
 .btn-counter{
     background-color: #007bff;
     border: none;
+    font-weight: bold;
     border-radius: 5px;
     color: #fff;
     cursor: pointer;
