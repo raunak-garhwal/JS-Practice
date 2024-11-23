@@ -16,9 +16,9 @@ async function checkWeather(city) {
                 
         const tempCelsius = data.main.temp - 273.15;
 
-        temperature.innerHTML = `${tempCelsius.toFixed(2)} °C`;
+        temperature.innerHTML = `${tempCelsius.toFixed(2)}°C`;
         description.innerHTML = data.weather[0].description;
-        humidity.innerHTML = `${data.main.humidity} %`;
+        humidity.innerHTML = `${data.main.humidity}%`;
         windspeed.innerHTML = `${data.wind.speed} m/s`;
 
     } catch (error) {
@@ -26,10 +26,10 @@ async function checkWeather(city) {
     }
 }
 
-searchbtn.addEventListener('click', () => checkWeather(inputbox.value));
+searchbtn.addEventListener('click', () => checkWeather(inputbox.value.trim()));
 
 inputbox.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
-        checkWeather(inputbox.value);
+        checkWeather(inputbox.value.trim());
     }
 });
