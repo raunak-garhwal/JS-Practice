@@ -2,14 +2,10 @@ const selectBtn = document.querySelector(".select-btn");
 const items = document.querySelectorAll(".item");
 const selectedOptions = document.getElementById("selected-options");
 
-selectBtn.addEventListener("click", () => {
-  selectBtn.classList.toggle("open");
-});
+selectBtn.addEventListener("click", () => selectBtn.classList.toggle("open"));
 
 items.forEach((item, index) => {
-  item.addEventListener("click", () => {
-    addAndUpdateSelectedOptions(item, index);
-  });
+  item.addEventListener("click", () => addAndUpdateSelectedOptions(item, index));
 });
 
 function addAndUpdateSelectedOptions(item, index) {

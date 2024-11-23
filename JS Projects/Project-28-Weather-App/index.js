@@ -11,25 +11,25 @@ async function checkWeather(city) {
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIkey}`;
 
     try {
-        const weatherData = await fetch(url).then(response => response.json());
-
-        const tempCelsius = weatherData.main.temp - 273.15;
+        const response = await fetch(url);
+        const data = await response.json();
+                
+        const tempCelsius = data.main.temp - 273.15;
 
         temperature.innerHTML = `${tempCelsius.toFixed(2)} °C`;
-        description.innerHTML = weatherData.weather[0].description;
-        humidity.innerHTML = `Humidity: ${weatherData.main.humidity}%`;
-        windspeed.innerHTML = `Wind Speed: ${weatherData.wind.speed} m/s`;
-
-        console.log(weatherData);
+        description.innerHTML = data.weather[0].description;
+        humidity.innerHTML = `${data.main.humidity} %`;
+        windspeed.innerHTML = `${data.wind.speed} m/s`;
 
     } catch (error) {
         console.error("Error fetching weather data:", error);
     }
 }
 
-searchbtn.addEventListener('click', () => {
-    checkWeather(inputbox.value);
+searchbtn.addEventListener('click', () => checkWeather(inputbox.value));
+
+inputbox.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+        checkWeather(inputbox.value);
+    }
 });
-
-
-

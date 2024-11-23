@@ -1,13 +1,10 @@
-
-body{
-
+body {
     display: flex;
     justify-content: center;
     margin-top: 50px;
-  
-  }
-  
-  .popover {
+}
+
+.popover {
     display: none;
     position: absolute;
     width: 250px;
@@ -19,13 +16,13 @@ body{
     font-size: 16px;
     line-height: 1.5;
     text-align: center;
-  }
+}
 
-  .popover.active{
+.popover.active {
     display: block;
-  }
+}
 
-  .btn {
+.btn {
     display: inline-block;
     padding: 10px;
     border-radius: 5px;
@@ -33,8 +30,8 @@ body{
     color: #fff;
     font-size: 16px;
     cursor: pointer;
-  }
-  
-  .btn:hover {
+}
+
+.btn:hover {
     background-color: #303f9f;
-  }
+}

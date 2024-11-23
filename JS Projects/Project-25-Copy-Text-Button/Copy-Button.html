@@ -8,7 +8,6 @@
 <body>
     <p id="code-block">const message = "Hello, World!";</p>
     <button id="copy-button">Copy Code</button>
-
 <script>
     document.getElementById("copy-button").addEventListener("click", () => {
     // Select the text from the code block
@@ -17,12 +16,8 @@
     // Use the Clipboard API to copy
     navigator.clipboard
         .writeText(codeBlock)
-        .then(() => {
-        alert("Code copied to clipboard!");
-        })
-        .catch((err) => {
-        console.error("Failed to copy: ", err);
-        });
+        .then(() => alert("Code copied to clipboard!"))
+        .catch((err) => console.error("Failed to copy: ", err))
     });
 </script>
 </body>
