@@ -13,8 +13,8 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 3rem;
-  padding: 4rem 0 0 0;
+  gap: 2rem;
+  padding: 1.5rem 0 0 0;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -23,7 +23,7 @@ body {
   width: calc(100% - 20vw);
 }
 
-.nav-tabs {
+#nav-tabs {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -31,7 +31,7 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
-  .nav-tabs {
+  #nav-tabs {
     flex-wrap: nowrap;
   }
 }
@@ -59,20 +59,21 @@ button.active {
   background-color: black;
   border-color: black;
   color: #fff;
+  transition: all ease 0.3s;
 }
 
-.tab-content {
+#tab-content {
   padding: 1.5rem 2rem;
 }
 
-.tab-content p {
+#tab-content p {
   line-height: 1.75em;
   font-size: 1.125em;
 }
 
 img {
   width: 100%;
-  height: 250px;
+  height: 290px;
   object-fit: cover;
   border-radius: 0.5rem;
 }
@@ -90,6 +91,6 @@ img {
   }
 
   img {
-    width: 250px;
+    width: 260px;
   }
 }

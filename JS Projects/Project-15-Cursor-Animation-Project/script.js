@@ -1,9 +1,7 @@
 const customCursor = document.querySelector(".cursor");
 const navLinks = document.querySelectorAll(".nav-links li");
 
-document.addEventListener("mousemove", (e) => {
-    updateCursorPosition(e);
-});
+document.addEventListener("mousemove", e => updateCursorPosition(e));
 
 function updateCursorPosition(e) {
     customCursor.style.top = e.pageY + "px";
@@ -22,18 +20,10 @@ navLinks.forEach((link) => {
     });
 });
 
-function animateCursor() {
-    customCursor.classList.add("link-animate");
-}
+const animateCursor = () => customCursor.classList.add("link-animate");
 
-function removeCursorAnimation() {
-    customCursor.classList.remove("link-animate");
-}
+const removeCursorAnimation = () => customCursor.classList.remove("link-animate");
 
-function highlightLink(link) {
-    link.classList.add("link-hovering");
-}
+const highlightLink = (link) => link.classList.add("link-hovering");
 
-function unhighlightLink(link) {
-    link.classList.remove("link-hovering");
-}
+const unhighlightLink = (link) => link.classList.remove("link-hovering");

@@ -41,7 +41,6 @@
         height: 100px;
         margin: 0px 5px;
         position: relative;
-        /* z-index: 4; */
       }
       .details {
         display: flex;
@@ -108,32 +107,29 @@
       }
       function createCard(title, cName, views, monthsOld, duration, thumbnail) {
         let cont = document.querySelector(".container");
-        cont.insertAdjacentHTML(
-          "beforeend",
-          `<div class="card">
-        <div class="img">
-        <span id="duration">${duration}</span>
-        <img src="${thumbnail}" alt="Thumbnail" />
-        </div>
-        <div class="details">
-        <div class="intro">
-            <p>
-            ${title}
-            </p>
-        </div>
-        <div class="other-info">
-            <p>${cName}</p>
-            <p id="centerdot">&centerdot;</p>
-            <p>${convertViews(views)} views</p>
-            <p id="centerdot">&centerdot;</p>
-            <p>${monthsOld} months ago</p>
-        </div>
-        </div>
-    </div>`
+        cont.insertAdjacentHTML("beforeend",
+       `<div class="card">
+          <div class="img">
+            <span id="duration">${duration}</span>
+            <img src="${thumbnail}" alt="Thumbnail"/>
+          </div>
+          <div class="details">
+            <div class="intro">
+              <p>${title}</p>
+            </div>
+            <div class="other-info">
+              <p>${cName}</p>
+              <p id="centerdot">&centerdot;</p>
+              <p>${convertViews(views)} views</p>
+              <p id="centerdot">&centerdot;</p>
+              <p>${monthsOld} months ago</p>
+            </div>
+          </div>
+        </div>`
         );
       }
       
-      createCard("Introduction to Web Dev Course | The Best Course #1", "CodeWithHarry", 5000, 7, "31:22", "assets/image.png")
+      createCard("Introduction to Web Dev Course | The Best Course #2", "CodeWithHarry", 5000, 1, "14:54", "assets/image.png")
       // createCard("Introduction to Web Dev Course | The Best Course #1", "CodeWithHarry", 50, 7, "31:22", "assets/image.png")
       // createCard("Introduction to Web Dev Course | The Best Course #1", "CodeWithHarry", 560000, 7, "31:22", "assets/image.png")
       // createCard("Introduction to Web Dev Course | The Best Course #1", "CodeWithHarry", 560, 7, "31:22", "assets/image.png")
