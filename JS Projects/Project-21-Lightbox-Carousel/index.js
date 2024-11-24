@@ -28,10 +28,7 @@ function openLightbox(selectedImage) {
         selectedImage.dataset.id === item.dataset.id
           ? "img-thumbnail selected"
           : "img-thumbnail"
-      }"
-        alt="${item.alt}"
-        />
-        `;
+      }" alt="${item.alt}"/>`;
     })
     .join("");
 
@@ -44,21 +41,13 @@ function setLightboxImage(selectedImage) {
   lightboxImgCaption.textContent = selectedImage.title;
 }
 
-closeBtn.addEventListener("click", function () {
-  lightbox.classList.remove("open");
-});
+closeBtn.addEventListener("click", () => lightbox.classList.remove("open"));
 
-prevBtn.addEventListener("click", function () {
-  loadPreviousImage();
-});
+prevBtn.addEventListener("click", () => loadPreviousImage());
 
-nextBtn.addEventListener("click", function () {
-  loadNextImage();
-});
+nextBtn.addEventListener("click", () => loadNextImage());
 
-thumbnailContainer.addEventListener("click", function (e) {
-  chooseThumbnailImage(e);
-});
+thumbnailContainer.addEventListener("click", (e) => chooseThumbnailImage(e));
 
 function loadNextImage() {
   const selectedImage = thumbnailContainer.querySelector(".selected");

@@ -7,7 +7,6 @@ function updateSlide(currentIndex) {
     slides[i].classList.remove("active");
     dots[i].classList.remove("active");
   }
-
   slides[currentIndex].classList.add("active");
   dots[currentIndex].classList.add("active");
 }
@@ -23,7 +22,6 @@ function prevSlide() {
   } else {
     slideIndex = slides.length - 1;
   }
-
   updateSlide(slideIndex);
 }
 
@@ -33,6 +31,5 @@ function nextSlide() {
   } else {
     slideIndex = 0;
   }
-
   updateSlide(slideIndex);
 }

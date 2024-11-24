@@ -1,8 +1,7 @@
 const hamburgerIcon = document.getElementById("hamburger-icon");
 const closeIcon = document.getElementById("close-icon");
 const sideNavigation = document.getElementById("side-nav");
-const content = document.querySelector(".content");
-
+const content = document.querySelector("#content");
 const navLinks = document.querySelectorAll("#nav-links li");
 
 hamburgerIcon.addEventListener("click", function () {

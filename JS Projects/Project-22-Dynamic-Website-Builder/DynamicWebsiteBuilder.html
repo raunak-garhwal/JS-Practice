@@ -106,8 +106,8 @@
         return v;
       }
       function createCard(title, cName, views, monthsOld, duration, thumbnail) {
-        let cont = document.querySelector(".container");
-        cont.insertAdjacentHTML("beforeend",
+        let container = document.querySelector(".container");
+        container.insertAdjacentHTML("beforeend",
        `<div class="card">
           <div class="img">
             <span id="duration">${duration}</span>
