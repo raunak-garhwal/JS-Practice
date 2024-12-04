@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: arial;
+      }
+      body {
+        background-color: beige;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container {
+        height: 450px;
+        width: 215px;
+        background-color: black;
+        border-radius: 30px;
+        color: white;
+      }
+      #output {
+        display: flex;
+        justify-content: end;
+        align-items: end;
+        background-color: black;
+        height: 173px;
+        width: 200px;
+        font-size: 55px;
+        border-radius: 50%;
+        padding-bottom: 5px;
+        transition: font-size 0.3s ease;
+      }
+      .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        height: 192px;
+        width: 215px;
+        gap: 9px;
+        border-radius: 50%;
+      }
+      .btn {
+        border-radius: 50%;
+        font-size: 25px;
+        height: 41px;
+        width: 41px;
+        color: white;
+        border: none;
+        background-color: #3b3a3a;
+        font-weight: 400;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+      #obtn {
+        background-color: #3b3a3a;
+        width: 90px;
+        border-radius: 20px;
+        border: none;
+        color: white;
+      }
+      .line {
+        font-weight: 100;
+        font-size: 20px;
+        border: none;
+        text-decoration-line: underline;
+        color: transparent;
+        text-decoration-color: white;
+        text-decoration-thickness: 2.75px;
+        padding-top: 50px;
+        text-align: center;
+      }
+      .ylw {
+        background-color: #fe9505;
+        font-size: 30px;
+      }
+      .tp {
+        background-color: #a5a5a5;
+        font-size: 20px;
+        color: black;
+        font-weight: 600;
+      }
+      .btn:hover {
+        cursor: pointer;
+        opacity: 70%;
+      }
+      .btn:active {
+        transform: scale(85%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="output">0</div>
+      <div class="box">
+        <button class="btn tp" onclick="cleardisplay()">AC</button>
+        <button class="btn tp" onclick="addminus('-')">+/-</button>
+        <button class="btn tp" onclick="appendper('*100')">%</button>
+        <button class="btn ylw" onclick="append('/')">/</button>
+        <button class="btn" onclick="append('7')">7</button>
+        <button class="btn" onclick="append('8')">8</button>
+        <button class="btn" onclick="append('9')">9</button>
+        <button class="btn ylw" onclick="append('*')">&times;</button>
+        <button class="btn" onclick="append('4')">4</button>
+        <button class="btn" onclick="append('5')">5</button>
+        <button class="btn" onclick="append('6')">6</button>
+        <button class="btn ylw" onclick="append('-')">-</button>
+        <button class="btn" onclick="append('1')">1</button>
+        <button class="btn" onclick="append('2')">2</button>
+        <button class="btn" onclick="append('3')">3</button>
+        <button class="btn ylw" onclick="append('+')">+</button>
+        <button class="btn" id="obtn" onclick="append('0')">0</button>
+        <button class="btn" onclick="append('.')">.</button>
+        <button class="btn ylw" onclick="calculateresult()">=</button>
+      </div>
+      <div class="line">________</div>
+    </div>
+    <script>
+      let displayValue = "";
+
+      function append(value) {
+        displayValue += value;
+        if (displayValue.toString().length > 6) {
+          document.getElementById("output").style.fontSize = "35px";
+        }
+        if (displayValue.toString().length > 10) {
+          document.getElementById("output").style.fontSize = "30px";
+        }
+        if (displayValue.toString().length > 12) {
+          document.getElementById("output").style.fontSize = "25px";
+        }
+        if (displayValue.toString().length > 14) {
+          document.getElementById("output").style.fontSize = "20px";
+        }
+        if (displayValue.toString().length > 17) {
+          document.getElementById("output").style.fontSize = "17px";
+        }
+        if (displayValue.toString().length > 19) {
+          document.getElementById("output").style.fontSize = "15px";
+        }
+
+        document.getElementById("output").innerText = displayValue;
+      }
+
+      function cleardisplay() {
+        document.getElementById("output").style.fontSize = "50px";
+        displayValue = "";
+        document.getElementById("output").innerText = 0;
+      }
+
+      function calculateresult() {
+        try {
+          displayValue = eval(displayValue);
+          if (displayValue.toString().length > 7) {
+            document.getElementById("output").style.fontSize = "35px";
+          }
+          if (displayValue.toString().length > 10) {
+            document.getElementById("output").style.fontSize = "30px";
+          }
+          if (displayValue.toString().length > 12) {
+            document.getElementById("output").style.fontSize = "25px";
+          }
+          if (displayValue.toString().length > 14) {
+            document.getElementById("output").style.fontSize = "20px";
+          }
+          if (displayValue.toString().length > 17) {
+            document.getElementById("output").style.fontSize = "18px";
+          }
+          if (displayValue.toString().length > 19) {
+            document.getElementById("output").style.fontSize = "15px";
+          }
+
+          document.getElementById("output").innerText = displayValue;
+        } catch (error) {
+          document.getElementById("output").innerText = "Error";
+        }
+      }
+
+      function addminus() {
+        displayValue = "-";
+        document.getElementById("output").innerText = displayValue;
+      }
+
+      function appendper(value) {
+        displayValue += value;
+        displayValue = eval(displayValue);
+        document.getElementById("output").innerText = displayValue;
+      }
+    </script>
+  </body>
+</html>
